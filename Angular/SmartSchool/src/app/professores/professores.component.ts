@@ -6,15 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./professores.component.css']
 })
 export class ProfessoresComponent implements OnInit {
-  title = 'Professores';
+  titulo = 'Professores';
   public professores = [ 
-    { nome:'Ana'},
-    { nome:'Alice'},
-    { nome:'Alberto'},
-    { nome:'Amanda'},
-    { nome:'Arthur'},
-    { nome:'Aline'},
-    { nome:'Alessandro'},
+    { id: 1 ,nome:'Ana', disciplina: 'Matemática'},
+    { id: 2,nome:'Alice', disciplina: 'Fisica'},
+    { id: 3,nome:'Alberto', disciplina: 'Portugues'},
+    { id: 4,nome:'Amanda', disciplina: 'Ciências'},
+    { id: 5,nome:'Arthur', disciplina: 'Educação Fisica'},
+    { id: 6,nome:'Aline', disciplina: 'Geografia'},
+    { id: 7,nome:'Alessandro', disciplina: 'História'},
   ];
 
   constructor() { }
