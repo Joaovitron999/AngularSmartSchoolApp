@@ -1,19 +1,26 @@
-<app-titulo [titulo]="titulo"></app-titulo>
-<table class="table">
-  <thead class="table-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nome</th>
-      <th scope="col">Sobrenome</th>
-      <th scope="col">Telefone</th>
-    </tr>
-  </thead>
-  <tbody *ngFor="let aluno of alunos">
-    <tr>
-      <th scope="row">{{aluno.id}}</th>
-      <td>{{aluno.nome}}</td>
-      <td>{{aluno.sobrenome}}</td>
-      <td>{{aluno.telefone}}</td>
-    </tr>
-  </tbody>
-</table>
+
+<div *ngIf="alunoSelecionado">
+  <app-titulo [titulo]="'Aluno: '+ alunoSelecionado"></app-titulo>
+  Aluno selecionado: {{ alunoSelecionado }}
+  <button class="btn btn-def" (click)="voltar()">Voltar</button>
+</div>
+<div *ngIf="!alunoSelecionado">Nenhum aluno selecionado<table class="table table-hover">
+  <app-titulo [titulo]="titulo"></app-titulo>
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Sobrenome</th>
+        <th scope="col">Telefone</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let aluno of alunos" style="cursor: poiter" (click)="alunoSelect(aluno)">
+      <tr>
+        <th scope="row">{{ aluno.id }}</th>
+        <td>{{ aluno.nome }}</td>
+        <td>{{ aluno.sobrenome }}</td>
+        <td>{{ aluno.telefone }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
