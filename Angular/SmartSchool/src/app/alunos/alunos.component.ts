@@ -8,7 +8,7 @@ import { Aluno } from '../models/Aluno';
 })
 export class AlunosComponent implements OnInit {
   public titulo = 'Alunos';
-  public alunoSelecionado:Aluno;
+  public alunoSelecionado:Aluno | undefined;
   public alunos = [
     { id: 1, nome:'Marta',sobrenome:'Wayne', telefone:'28374639'},
     { id: 2, nome:'Luana',sobrenome:'Parker', telefone:'17829304'},
@@ -23,7 +23,7 @@ export class AlunosComponent implements OnInit {
     this.alunoSelecionado = aluno;
   }
   voltar() {
-    this.alunoSelecionado = null;
+    this.alunoSelecionado = undefined;
 
   }
   constructor() {}

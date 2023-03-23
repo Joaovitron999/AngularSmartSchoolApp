@@ -8,7 +8,7 @@ import { Professor } from '../models/Professor';
 })
 export class ProfessoresComponent implements OnInit {
   titulo = 'Professores';
-  public professorSelecionado:Professor = '';
+  public professorSelecionado:Professor|undefined;
   public professores = [
     { id: 1 ,nome:'Ana', disciplina: 'Matemática'},
     { id: 2,nome:'Alice', disciplina: 'Fisica'},
@@ -23,7 +23,7 @@ export class ProfessoresComponent implements OnInit {
     this.professorSelecionado = professor;
   }
   voltar() {
-    this.professorSelecionado = null;
+    this.professorSelecionado = undefined;
   }
   constructor() { }
 
