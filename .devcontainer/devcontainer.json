@@ -3,6 +3,8 @@
     "ghcr.io/devcontainers-contrib/features/angular-cli:2": {},
       "ghcr.io/devcontainers/features/node:1": {},
       
-  "features": {
+"features": {
+	"ghcr.io/devcontainers-contrib/features/angular-cli:2": {},
+	"ghcr.io/devcontainers-contrib/features/npm-package:1": {}
   }
 }
