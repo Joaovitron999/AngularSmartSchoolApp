@@ -2,11 +2,11 @@
 <div *ngIf="alunoSelecionado">
   <div class="coonteiner">
     <div class="col-6">
-      <app-titulo [titulo]="'Aluno: '+ alunoSelecionado"></app-titulo>
-    </div>  
+      <app-titulo [titulo]="'Aluno: '+ alunoSelecionado.nome"></app-titulo>
+    </div>
     <div class="mt-4 col-6">
       <button class="btn btn-warning" (click)="voltar()">Voltar</button>
-    </div>      
+    </div>
   </div>
 
   <form>
