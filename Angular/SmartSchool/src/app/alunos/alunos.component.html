@@ -2,21 +2,27 @@
 <div *ngIf="alunoSelecionado">
   <div class="coonteiner">
     <div class="col-6">
-      <app-titulo [titulo]="'Aluno: '+ alunoSelecionado.nome"></app-titulo>
+      <app-titulo [titulo]="'Aluno: '+ alunoSelecionado.id"></app-titulo>
     </div>
-    <div class="mt-4 col-6">
-      <button class="btn btn-warning" (click)="voltar()">Voltar</button>
+    <div class="mt-1">
+      <button class="btn btn-warning" (click)="voltar()">
+        Lista de Alunos
+      </button>
     </div>
   </div>
 
   <form>
     <div class="form-group">
-      <label for="formGroupExampleInput">Example label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+      <label for="formGroupExampleInput">Nome</label>
+      <input type="text" class="form-control" value="{{alunoSelecionado.nome}}" >
     </div>
     <div class="form-group">
-      <label for="formGroupExampleInput2">Another label</label>
-      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+      <label for="formGroupExampleInput2">Sobrenome</label>
+      <input type="text" class="form-control" value="{{alunoSelecionado.sobrenome}}" >
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Telefone</label>
+      <input type="text" class="form-control" value="{{alunoSelecionado.telefone}}" >
     </div>
   </form>
 </div>
