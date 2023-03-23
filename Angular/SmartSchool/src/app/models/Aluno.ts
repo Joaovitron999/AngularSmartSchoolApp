@@ -1,7 +1,7 @@
 export class Aluno {
-  id:number;
-  nome:string;
-  sobrenome:string;
-  telefone: string;
+  id:number   = 0;
+  nome:string = '';
+  sobrenome:string = '';
+  telefone: string = '';
 }
 
